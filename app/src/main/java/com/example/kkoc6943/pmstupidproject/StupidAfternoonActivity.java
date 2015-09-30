@@ -75,6 +75,21 @@ public class StupidAfternoonActivity extends ActionBarActivity
 
     }
 
+    private void changeVisiblity()
+    {
+        sillyWords.setVisibility(View.GONE);
+        if(sillyWords.getVisibility() == View.GONE)
+        {
+            sillyWords.setVisibility(View.VISIBLE);
+
+        }
+        else
+        {
+            sillyWords.setVisibility(View.GONE);
+
+        }
+    }
+
     public void setupListeners()
     {
         colorChangeButton.setOnClickListener(new View.OnClickListener()
@@ -84,6 +99,7 @@ public class StupidAfternoonActivity extends ActionBarActivity
             {
                 //This is where you put code that happens when you click a button.
                 changeColors();
+                changeVisiblity();
             }
         });
     }
